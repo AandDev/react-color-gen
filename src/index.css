@@ -1,0 +1,157 @@
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+  --main-color: #0084ff;
+  --sec-color: #6eb9ff;
+  --gray-color: #a7a7a7;
+  --border-color: #404040;
+  --text-dark-color: #303030;
+  --text-light-color: #f9f9f9;
+  --transition: 0.3s ease;
+}
+
+/*
+=============== 
+Global Styles
+===============
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  font-family: 'Ubuntu', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section {
+  width: 700px;
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  position: relative;
+  width: 70%;
+  text-align: center;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: var(--main-color);
+  color: var(--text-light-color);
+  transition: var(--transition);
+}
+
+.logo {
+  position: absolute;
+  top: 7px;
+  left: 10px;
+  width: 20px;
+  opacity: 0.5;
+}
+
+.color-form {
+  padding: 25px;
+  margin: 15px 0;
+  border: 2px solid var(--border-color);
+  border-radius: 15px;
+}
+
+.color-form input, button {
+  padding: 5px;
+  border-radius: 8px;
+  border: 2px solid var(--gray-color);
+}
+
+.btn {
+  margin-left: 5px;
+  padding: 5px 8px;
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+  color: var(--text-light-color);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn:hover {
+  background-color: var(--sec-color);
+}
+
+.color-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.color-item {
+  width: 105px;
+  height: 60px;
+  padding: 5px;
+  text-align: center;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 10px;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.color-item:hover {
+  transform: translateY(-2px);
+}
+
+.color-value {
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 850px) {
+
+  .color-container {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+  }
+
+  .title {
+    width: 60%;
+  }
+
+  .logo {
+    width: 25px;
+  }
+
+  .color-form {
+      width: 60%;
+      text-align: center;
+  }
+
+  .color-form input, button {
+      padding: 7px;
+  }
+
+  .btn {
+      margin-left: 5px;
+      padding: 5px 10px;
+      font-size: 15px;
+      font-weight: bold;
+  }
+
+  .color-item {
+      width: 120px;
+      height: 120px;
+  }
+
+}
